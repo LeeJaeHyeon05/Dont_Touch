@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Don\'t Touch</string>
+    <string name="mainRoundText">라운드</string>
+    <string name="canYouText">이건 못 참지!</string>
+    <string name="stopText">리셋</string>
+    <string name="continueText">다음 라운드</string>
+    <string name="explainText">카운트가 멈출 때까지 참아 보세요</string>
+
+    <string name="formatted_time">%02d:%02d</string>
+
+    <string name="resetNum">0:00</string>
+    <string name="pressToStart">눌러서 시작 해보세요!</string>
+</resources>
