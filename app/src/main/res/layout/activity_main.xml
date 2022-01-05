@@ -20,6 +20,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
     <TextView
         android:id="@+id/countNum"
         android:layout_width="wrap_content"
@@ -39,25 +41,24 @@
         android:id="@+id/timerStartBtn"
         android:layout_width="320dp"
         android:layout_height="70dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countNum"
+        android:background="@color/startBtnColor"
         android:text="@string/pressToStart"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:background="@color/startBtnColor"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countNum" />
 
     <Button
         android:id="@+id/timerStopBtn"
         android:layout_width="320dp"
         android:layout_height="120dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="200dp"
         android:background="@color/btnColor"
         android:text="@string/canYouText"
         android:textSize="29sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timerStartBtn" />
@@ -66,26 +67,15 @@
     <Button
         android:id="@+id/stopBtn"
         android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_height="70dp"
         android:layout_marginTop="20dp"
-        android:background="@color/noColor"
         android:text="@string/stopText"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:gravity="start"
-        app:layout_constraintStart_toStartOf="@+id/timerStopBtn"
-        app:layout_constraintTop_toBottomOf="@+id/timerStopBtn" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerStopBtn"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
-        android:id="@+id/continueText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@color/noColor"
-        android:text="@string/continueText"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/timerStopBtn"
-        app:layout_constraintTop_toBottomOf="@+id/timerStopBtn" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

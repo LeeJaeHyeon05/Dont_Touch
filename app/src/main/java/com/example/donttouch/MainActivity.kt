@@ -1,9 +1,11 @@
 package com.example.donttouch
 
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.donttouch.databinding.ActivityMainBinding
 import java.util.concurrent.TimeUnit
 
@@ -13,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private var mBinding : ActivityMainBinding? = null
     private val binding get() = mBinding!!
 
+    private var time = 180000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         //타이머 멈추기 셋온클릭 리스너
         binding.timerStopBtn.setOnClickListener {
             stopTimer()
+            dialog()
         }
         binding.stopBtn.setOnClickListener {
             binding.countNum.setText(R.string.resetNum)
@@ -40,8 +44,19 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun dialog() {
+        val dialogBuilder = AlertDialog.Builder(this)
+            dialogBuilder.setMessage(binding.timerStopBtn.toString() + "분 참으셨습니다!")
+            .setTitle("결과!")
+                .setNegativeButton("나가기", DialogInterface.OnClickListener {_, _ -> })
+        val alert = dialogBuilder.create()
+        alert.setTitle("결과")
+        alert.show()
 
-    private val countDownTimer = object : CountDownTimer(1000 * 30, 1000) {
+    }
+
+
+    private val countDownTimer = object : CountDownTimer(time.toLong(), 1000) {
         override fun onTick(millisUntilFinished: Long) {
             // 텍스트 업데이트
             binding.countNum.text = getString(R.string.formatted_time,
@@ -67,3 +82,4 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
+
