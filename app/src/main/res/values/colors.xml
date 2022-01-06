@@ -10,6 +10,7 @@
 
     <color name="BackgroundColor">#D5F3B3</color>
     <color name="btnColor">#DD97F62B</color>
+    <color name="btnColor2">#DD1B2E05</color>
     <color name="startBtnColor">#DD46770F</color>
     <color name="noColor">#00FFFFFF</color>
 </resources>
